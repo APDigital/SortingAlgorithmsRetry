@@ -17,7 +17,7 @@ namespace SortingRetry.Tests
         {
             int[] myList = { 8, 9, 6, 7, 4, 5, 3, 2, 1 };
             SelectSort.Select(myList);
-            Assert.AreEqual(myList,answer);
+            Assert.IsTrue(AssertSorted.IsSorted(myList));
         }
     }
 }
