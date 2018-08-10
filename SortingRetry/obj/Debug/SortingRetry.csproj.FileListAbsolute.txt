@@ -1,0 +1,7 @@
+c:\users\apearson\source\repos\SortingRetry\SortingRetry\bin\Debug\SortingRetry.exe.config
+c:\users\apearson\source\repos\SortingRetry\SortingRetry\bin\Debug\SortingRetry.exe
+c:\users\apearson\source\repos\SortingRetry\SortingRetry\bin\Debug\SortingRetry.pdb
+c:\users\apearson\source\repos\SortingRetry\SortingRetry\obj\Debug\SortingRetry.csprojResolveAssemblyReference.cache
+c:\users\apearson\source\repos\SortingRetry\SortingRetry\obj\Debug\SortingRetry.csproj.CoreCompileInputs.cache
+c:\users\apearson\source\repos\SortingRetry\SortingRetry\obj\Debug\SortingRetry.exe
+c:\users\apearson\source\repos\SortingRetry\SortingRetry\obj\Debug\SortingRetry.pdb
