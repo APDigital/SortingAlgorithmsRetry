@@ -30,7 +30,8 @@ namespace SortingRetry
             }
             int[] leftArray = MergeSortList(left.ToArray());
             int[] rightArray = MergeSortList(right.ToArray());
-            return Merge(leftArray, rightArray);
+            int[] result = Merge(leftArray, rightArray);
+            return result;
         }
 
         private static int[] Merge(int[] left, int[] right)
@@ -38,7 +39,7 @@ namespace SortingRetry
             List<int> leftList = left.ToList();
             List<int> rightList = right.ToList();
             List<int> result = new List<int>();
-            while (leftList.Count > 0 || rightList.Count > 0)
+            while (leftList.Count > 0 && rightList.Count > 0)
             {
                 if (leftList.First() <= rightList.First())
                 {
