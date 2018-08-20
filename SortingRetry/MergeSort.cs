@@ -41,10 +41,10 @@ namespace SortingRetry
             List<int> result = new List<int>();
             while (leftList.Count > 0 && rightList.Count > 0)
             {
-                if (leftList.First() <= rightList.First())
+                if (leftList.First() >= rightList.First())
                 {
                     result.Add(leftList.First());
-                    leftList.Remove(left.First());
+                    leftList.Remove(leftList.First());
                 }
                 else
                 {

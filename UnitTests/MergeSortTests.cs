@@ -15,7 +15,7 @@ namespace SortingRetry.Tests
         public void MergeSortListTest()
         {
             int[] myList = { 8, 9, 6, 7, 4, 5, 3, 2, 1 };
-            MergeSort.MergeSortList(myList);
+            myList = MergeSort.MergeSortList(myList);
             Assert.IsTrue(AssertSorted.IsSorted(myList));
         }
         
