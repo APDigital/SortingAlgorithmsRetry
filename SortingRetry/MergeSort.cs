@@ -15,8 +15,8 @@ namespace SortingRetry
             {
                 return unsorted;
             }
-            List<int> left = null;
-            List<int> right = null;
+            List<int> left = new List<int>();
+            List<int> right = new List<int>();
 
             int middle = unsorted.Length / 2;
 
@@ -30,37 +30,37 @@ namespace SortingRetry
             }
             int[] leftArray = MergeSortList(left.ToArray());
             int[] rightArray = MergeSortList(right.ToArray());
-            return Merge(left, right);
+            return Merge(leftArray, rightArray);
         }
 
-        private static int[] Merge(List<int> left, List<int> right)
+        private static int[] Merge(int[] left, int[] right)
         {
-            List<int> result = null;
-            while (left.Count > 0 || right.Count > 0)
+            List<int> leftList = left.ToList();
+            List<int> rightList = right.ToList();
+            List<int> result = new List<int>();
+            while (leftList.Count > 0 || rightList.Count > 0)
             {
-                if (left.Count > 0 && right.Count > 0)
+                if (leftList.First() <= rightList.First())
                 {
-                    if (left.First() <= right.First())
-                    {
-                        result.Add(left.First());
-                        left.Remove(left.First());
-                    }
-                    else
-                    {
-                        result.Add(right.First());
-                        right.Remove(right.First());
-                    }
+                    result.Add(leftList.First());
+                    leftList.Remove(left.First());
                 }
-                else if (left.Count > 0)
+                else
                 {
-                    result.Add(left.First());
-                    left.Remove(left.First());
+                    result.Add(rightList.First());
+                    rightList.Remove(rightList.First());
                 }
-                else if (right.Count > 0)
-                {
-                    result.Add(right.First());
-                    right.Remove(right.First());
-                }
+
+            }
+            while (leftList.Count > 0)
+            {
+                result.Add(leftList.First());
+                leftList.Remove(leftList.First());
+            }
+            while (rightList.Count > 0)
+            {
+                result.Add(rightList.First());
+                rightList.Remove(rightList.First());
             }
             int[] resultArray = result.ToArray();
             return resultArray;
